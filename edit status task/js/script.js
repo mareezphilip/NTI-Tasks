@@ -86,8 +86,9 @@ const addbtn = function(text , ele){
         return el
 }
 
-if(dataWrap)
-{
+
+function drawall(usersData){
+  {
     console.log("d5lt")
     document.write("llllllllllll")
     
@@ -150,25 +151,14 @@ if(dataWrap)
 
    
 
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-/*
 if(dataWrap){
     const usersData = JSON.parse(localStorage.getItem('myUsers')) || []
     drawall(usersData)
 }
-*/
+
 /*
 
 data = [
