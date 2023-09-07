@@ -86,14 +86,14 @@ const addbtn = function(text , ele){
         return el
 }
 
-
 function drawall(usersData){
-  {
+if(dataWrap)
+{
     console.log("d5lt")
     document.write("llllllllllll")
     
-    const usersData = JSON.parse(localStorage.getItem('myUsers')) || []
-    console.log(usersData)
+   // const usersData = JSON.parse(localStorage.getItem('myUsers')) || []
+   // console.log(usersData)
     if( !usersData.length ){
         const tr = document.createElement("tr")
         dataWrap.appendChild(tr)
@@ -130,12 +130,12 @@ function drawall(usersData){
        // show= addbtn("show",tr)
 
         del.addEventListener("click", function(e){
-          /*  console.log(index)
+            console.log(index)
             usersData.splice(index, 1)
             tr.remove()
             storeToLocalStorage("myUsers", usersData)
-           // drawall(usersData) 
-           */
+            drawall(usersData) 
+           
             
         })
 
@@ -148,10 +148,22 @@ function drawall(usersData){
           })
     })
 }
+}
 
    
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 if(dataWrap){
