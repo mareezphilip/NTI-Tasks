@@ -1,0 +1,31 @@
+{{>navbar}}
+    <section class="container my-5">
+    <form method="post">
+        <div class="mb-3">
+            <input name="name" placeholder="Name" class="form-control">
+        </div>
+        <div class="mb-3">
+            <input name="parcode" placeholder="parcode" class="form-control">
+        </div>
+        <div class="mb-3">
+            <input name="description" placeholder="Email" class="form-control">
+        </div>
+        <div class="mb-3">
+            <input name="price" placeholder="price" class="form-control">
+        </div>
+        <div class="mb-3">
+            <input name="priceafterdesc" placeholder="price after desc" class="form-control">
+        </div>
+        <div class="mb-3">
+            <select name="status" id="status">
+                <option value="available">Available</option>
+                <option value="unavailable">Unavailable</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <input type="submit" value="Add Product" class="btn btn-primary"> 
+        </div>
+
+    </form>
+    </section>
+{{>footer}}
