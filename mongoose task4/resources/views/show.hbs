@@ -1,0 +1,36 @@
+{{>navbar}}
+    {{!-- {{#each data}}
+        <h4>{{title}}</h4>
+        <img src="{{url}}">
+    {{/each}} --}}
+    <section class="container my-5">
+        <div>   
+            <a  href="/add" class="btn btn-primary">Add New User</a>
+        </div>
+        <table class="table table-stripped mt-4">
+            <thead>
+                <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>description</th>
+                <th>price </th>
+                <th> status</th>
+                
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{product.id}}</td>
+                    <td>{{product.name}}</td>
+                    <td>{{product.description}}</td>
+                    <td>
+                        {{product.price}}
+                    </td>
+                    <td> {{product.status}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+
+{{>footer}}

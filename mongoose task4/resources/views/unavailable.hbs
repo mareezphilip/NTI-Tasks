@@ -1,0 +1,64 @@
+{{>navbar}}
+    {{!-- {{#each data}}
+        <h4>{{title}}</h4>
+        <img src="{{url}}">
+    {{/each}} --}}
+    <section class="container my-5">
+        
+         <div class="row justify-content-between"> 
+        <h2 class="col-3">Unavailable Products </h2>
+        <div class="col-3">
+            <form>
+                <input class="form-control" name="searchKey">
+                <input type="submit" class="btn btn-seccess" value="search">
+            </form>
+        </div>
+       </div>
+        <table class="table table-stripped mt-4">
+            <thead>
+                <tr>
+                <th>#</th>
+                <th>parcode</th>
+                <th>Name</th>
+                <th>description</th>
+                <th>price </th>
+                <th>price after desc </th>
+                <th> status</th>
+                <th> change </th>
+                <th>actions</th>
+            </tr>
+            </thead>
+            <tbody>
+                {{#if hasproduct}}
+                {{#each unavailable}}
+                <tr>
+                    <td>{{id}}</td>
+                    <td>{{parcode}}</td>
+                    <td>{{name}}</td>
+                    <td>{{description}}</td>
+                    <td>{{price}}</td>
+                    <td>{{priceafterdesc}}</td>
+                    <td>{{status}}</td>
+                     <td>
+                      <a href="/statusa/{{id}}" class="btn btn-success mx-2" > available</a>
+                    </td>
+
+                    <td>
+                        <a href="/show/{{id}}" class="btn btn-success mx-2">Show</a>
+                        
+                        <a href="/delete/{{id}}" class="btn btn-danger mx-2">Delete</a>
+                    </td>
+                </tr>
+                {{/each}}
+
+                {{else}}
+                <tr class="bg-danger">
+                    <td colSpan="5" class="text-center">No Users Found</td>
+                </tr>
+                {{/if}}
+            </tbody>
+        </table>
+    </section>
+{{>footer}}
+
+
